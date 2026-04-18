@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;700&family=Manrope:wght@400;500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./styles.css" />
@@ -21,7 +21,16 @@
           <a class="text-link text-link-premium" href="./baseline.html">Back</a>
         </div>
         <div class="page-title-block">
-          <p class="step-label">Step 2 of 3</p>
+          <div
+            class="step-progress"
+            role="progressbar"
+            aria-label="Progress through setup"
+            aria-valuemin="0"
+            aria-valuemax="100"
+            aria-valuenow="66"
+          >
+            <span class="step-progress-fill" style="width: 66.666%"></span>
+          </div>
           <h1>Food Finder Preferences</h1>
         </div>
       </header>
