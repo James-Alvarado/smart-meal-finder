@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Food Finder Preferences | Smart Meal Finder</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;700&family=Manrope:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body class="page">
+    <main class="page-shell">
+      <header class="page-header page-header-centered">
+        <div class="page-nav">
+          <a class="text-link" href="./index.html">Landing Page</a>
+          <a class="text-link" href="./baseline.html">Back</a>
+        </div>
+        <div class="page-title-block">
+          <p class="step-label">Step 2 of 3</p>
+          <h1>Food Finder Preferences</h1>
+        </div>
+      </header>
+
+      <section class="form-card">
+        <p class="section-copy section-copy-centered">
+          Choose how you want the app to guide your grocery and meal planning.
+        </p>
+
+        <form id="preferences-form" novalidate>
+          <div class="question-flow">
+            <label class="field question-card">
+              <span class="question-label">ZIP code</span>
+              <input
+                type="text"
+                name="zipCode"
+                id="zipCode"
+                inputmode="numeric"
+                maxlength="5"
+                placeholder="10027"
+                required
+              />
+            </label>
+
+            <fieldset class="field question-card choice-group">
+              <legend class="question-label">Path selection</legend>
+              <div class="toggle-row">
+                <label class="choice-card">
+                  <input type="radio" name="path" value="budget" required />
+                  <span>Budget</span>
+                  <small>Plan meals around a weekly spending amount.</small>
+                </label>
+                <label class="choice-card">
+                  <input type="radio" name="path" value="benefit" required />
+                  <span>Benefit</span>
+                  <small>Find options that work with food benefit support.</small>
+                </label>
+              </div>
+            </fieldset>
+
+            <label class="field question-card budget-only is-hidden">
+              <span class="question-label">Weekly budget</span>
+              <div id="weeklyBudget-dropdown" class="custom-dropdown-host"></div>
+            </label>
+
+            <label class="field question-card benefit-only is-hidden">
+              <span class="question-label">Benefit type</span>
+              <div id="benefitType-dropdown" class="custom-dropdown-host"></div>
+            </label>
+          </div>
+
+          <p id="preferences-error" class="error-text" role="alert"></p>
+
+          <div class="form-actions">
+            <button class="primary-button" type="submit">See Suggestions</button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <script src="./js/storage.js"></script>
+    <script src="./js/form-ui.js"></script>
+    <script src="./js/preferences.js"></script>
+  </body>
+</html>

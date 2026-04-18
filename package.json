@@ -1,0 +1,9 @@
+{
+  "name": "smart-meal-finder",
+  "version": "1.0.0",
+  "description": "Simple HTML, CSS, and JavaScript MVP for healthier meal guidance.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  }
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meal Results | Smart Meal Finder</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;700&family=Manrope:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body class="page page-results">
+    <main class="page-shell results-shell">
+      <header class="page-header page-header-centered results-header">
+        <div class="page-nav page-nav-inline">
+          <a class="text-link text-link-premium" href="./index.html">Home</a>
+          <span class="nav-divider" aria-hidden="true">|</span>
+          <a class="text-link text-link-premium" href="./preferences.html">Back</a>
+        </div>
+        <div class="page-title-block">
+          <p class="step-label">Step 3 of 3</p>
+          <h1>Your Meal Guidance</h1>
+        </div>
+      </header>
+
+      <section class="results-intro results-hero">
+        <div class="results-hero-copy">
+          <p class="eyebrow">Smart Meal Finder results</p>
+          <h2>Simple ideas built around your goals</h2>
+          <p class="results-hero-text">
+            A clear weekly direction for groceries, meals, and nearby support,
+            shaped around the information you shared.
+          </p>
+        </div>
+        <button
+          id="restart-button"
+          class="secondary-button secondary-button-premium"
+          type="button"
+        >
+          Start over
+        </button>
+      </section>
+
+      <section id="loading-state" class="status-card results-status-card">
+        <div class="loader"></div>
+        <div>
+          <h3>Building your plan</h3>
+          <p>
+            We’re checking recipes, shaping meal guidance, and looking for
+            nearby options.
+          </p>
+        </div>
+      </section>
+
+      <section id="error-state" class="status-card results-status-card is-hidden">
+        <div>
+          <h3>We hit a problem</h3>
+          <p id="error-message">
+            Please go back and try again after checking your setup.
+          </p>
+        </div>
+      </section>
+
+      <section id="results-content" class="results-grid is-hidden">
+        <article class="result-card spotlight-card results-summary-card">
+          <p class="eyebrow">Summary</p>
+          <h3 id="summary-title">Your personalized meal path</h3>
+          <p id="summary-text"></p>
+        </article>
+
+        <article class="result-card result-card-compact">
+          <p class="eyebrow">Grocery Suggestions</p>
+          <ul id="grocery-list" class="clean-list"></ul>
+        </article>
+
+        <article class="result-card result-card-wide result-card-strategy">
+          <p class="eyebrow">Meal Strategy</p>
+          <div id="meal-strategy" class="strategy-copy"></div>
+        </article>
+
+        <article class="result-card result-card-wide results-section-card">
+          <div class="section-header-row">
+            <div>
+              <p class="eyebrow">Recipe Ideas</p>
+              <h3>Simple meals to try this week</h3>
+            </div>
+          </div>
+          <div id="recipe-grid" class="recipe-grid"></div>
+        </article>
+
+        <article class="result-card result-card-wide results-section-card">
+          <div class="section-header-row">
+            <div>
+              <p class="eyebrow">Nearby Stores and Support</p>
+              <h3>Helpful options around your ZIP code</h3>
+            </div>
+          </div>
+          <div id="stores-list" class="stores-list"></div>
+        </article>
+      </section>
+    </main>
+
+    <script src="./js/storage.js"></script>
+    <script src="./js/results.js"></script>
+  </body>
+</html>
